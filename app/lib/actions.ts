@@ -4,7 +4,6 @@ import { z } from 'zod'
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import postgres from 'postgres';
-import { tr } from 'zod/v4/locales';
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
 
@@ -26,7 +25,7 @@ const FormSchema = z.object({
 
 export type State = {
   errors?: {
-    custormerId?: string[];
+    customerId?: string[];
     amount?: string[];
     status?: string[];
   };
